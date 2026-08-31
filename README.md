@@ -1,5 +1,9 @@
 # ZhuaTech Mail Agent｜知华科技智能邮件助手系统
 
+## 企业级邮件外发治理
+
+新增敏感信息、外部收件人、DLP、安全扫描、人工审批和保留标签控制，详见 [邮件外发治理](docs/ENTERPRISE_OUTBOUND_GOVERNANCE.md)。
+
 ZhuaTech Mail Agent 是上海如静知华信息科技有限公司面向“企业邮件协作”场景推出的社区源码项目。面向企业邮件协作场景的收件整理和人工审核式回复助手。辅助完成邮件分类、回复草稿、行动项提取与发送前检查。
 
 [知华科技官网](https://www.zhuatech.cn/) · Java 包名 `cn.zhuatech.mailagent` · API `POST /api/mailagent/run`
