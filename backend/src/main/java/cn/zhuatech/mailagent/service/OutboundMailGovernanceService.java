@@ -5,8 +5,14 @@ import jakarta.validation.constraints.NotBlank;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class OutboundMailGovernanceService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> approvals = new ArrayList<>();
@@ -20,15 +26,24 @@ public class OutboundMailGovernanceService {
         return new Result(request.messageId(), decision, List.copyOf(blockers),
                 List.copyOf(approvals), "SEND".equals(decision));
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String messageId, @Min(0) int externalRecipients,
                           @Min(0) int attachmentCount, boolean containsSensitiveData,
                           boolean dlpPassed, boolean humanApproved,
                           boolean retentionLabelApplied, boolean malwareScanPassed) {
+        /**
+         * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+         */
         public Request {
             if (messageId == null || messageId.isBlank()) throw new IllegalArgumentException("messageId is required");
             if (externalRecipients < 0 || attachmentCount < 0) throw new IllegalArgumentException("counts must be non-negative");
         }
     }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String messageId, String decision, List<String> blockers,
                          List<String> requiredApprovals, boolean sendAllowed) {}
 }
